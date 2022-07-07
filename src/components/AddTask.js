@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const AddTask = ({tasks}) => {
+const AddTask = ({tasks, setTasks}) => {
 
     const [task, setTask] = useState('');
     const [day, setDay] = useState('');
@@ -12,6 +12,9 @@ const AddTask = ({tasks}) => {
         e.preventDefault();
         const id = new Date().getTime();
         const newTask = {id:id, task:task, day:day, isDone:false};
+        setTasks([...tasks, newTask]);
+        setTask('');
+        setDay('');
         
     }
 
