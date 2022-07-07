@@ -6,7 +6,8 @@ import AddTask from './AddTask'
 
 
 
-const Header = () => {
+const Header = ({tasks}) => {
+  // console.log(tasks);
     const[show, setShow] = useState(true)
 
 
@@ -15,7 +16,7 @@ const Header = () => {
         <h1>Task Tracker</h1>
         <button onClick={() => setShow(!show)} className='btn1'>{show ? "Show Add Task Bar" : "Close Add Task Bar"}</button>
 
-        {!show && <AddTask/>}
+        {!show && <AddTask tasks = {tasks}/>}
     </div>
   )
 }
