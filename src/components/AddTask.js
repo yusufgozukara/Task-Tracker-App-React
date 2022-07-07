@@ -11,7 +11,7 @@ const AddTask = ({tasks}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const id = new Date().getTime();
-        const newTask = {id:id, task:task, day:day, isDone:false}
+        const newTask = {id:id, task:task, day:day, isDone:false};
         
     }
 
